@@ -1,0 +1,83 @@
+/*Page*/
+div{
+    display: inline-block;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+img {
+    display: block;
+}
+/*Section*/
+#S1{
+    background-color: rgb(245, 240, 230);
+    width: 105%;
+    padding-left: 10px;
+}
+
+#S2 {
+    padding-left: 10px;
+    background-image: url("images/sec2_background.jpg");
+    color: white;
+}
+
+#S3{
+    background-color: rgb(245, 240, 230);
+    padding-left: 10px;
+    width: 105%;
+}
+
+/*Navbar*/
+#navbar {
+    width: 110%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#navbar .img{
+    max-width: 400px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+  
+li a:hover {
+    background-color: #182b49;
+    color: white;
+}
+
+/*Grid*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 25px;
+}
+.grid-item {
+    background-color: #182b49;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    max-height: 500px;
+    overflow: scroll;
+}
