@@ -3,18 +3,41 @@ div{
     display: inline-block;
 }
 
+.section {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section > img {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    text-align: left;
+    font-size: 24px;
+}
+
 h3 {
-    font-size: 20px;
+    text-align: left;
+    font-size: 30px;
+    width: 100%;       /* Take up the full width */
+    margin-bottom: 20px;
 }
 
 img {
     display: block;
+    max-width: 100%;
 }
 /*Section*/
 #S1{
+    margin: 0 auto;
+    padding: 20px;
     background-color: rgb(245, 240, 230);
-    width: 105%;
-    padding-left: 10px;
+    width: 98%;
 }
 
 #S2 {
@@ -26,17 +49,17 @@ img {
 #S3{
     background-color: rgb(245, 240, 230);
     padding-left: 10px;
-    width: 105%;
+    width: 98%;
 }
 
 /*Navbar*/
 #navbar {
-    width: 110%;
+    width: 100%;
     background-color: white;
     position: sticky;
     top: 0;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 27px;
 }
 
 #navbar .img{
@@ -70,14 +93,43 @@ li a:hover {
 /*Grid*/
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
     column-gap: 25px;
+    width: 100%;
 }
 .grid-item {
     background-color: #182b49;
     color: white;
-    padding: 20px;
     text-align: left;
     max-height: 500px;
     overflow: scroll;
+}
+
+/* Media Query for screens less than 800px wide */
+@media screen and (max-width: 800px) {
+    ul {
+        display: none;
+    }
+
+    .logo {
+        max-width: 75%;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #S1, #S3 {
+        width: 92%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
 }
